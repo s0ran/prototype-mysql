@@ -30,4 +30,4 @@ dbshell:
 	docker-compose -f docker-compose.development.yml exec db bash
 
 mysql:
-	docker-compose -f docker-compose.development.yml exec db mysql -u test -p test test-db
+	docker-compose -f docker-compose.development.yml exec db mysql -utest -ptest test-db
