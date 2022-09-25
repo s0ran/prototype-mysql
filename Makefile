@@ -1,4 +1,4 @@
-.PHONY: all help update up up-d down ps 
+.PHONY: all help update up up-d down ps dbshell mysql
 
 all:
 	@echo "Hello $(LOGNAME), nothing to do by default"
@@ -25,3 +25,9 @@ down:
 
 ps:
 	docker-compose -f docker-compose.development.yml ps
+
+dbshell:
+	docker-compose -f docker-compose.development.yml exec db bash
+
+mysql:
+	docker-compose -f docker-compose.development.yml exec db mysql -u test -p test test-db
